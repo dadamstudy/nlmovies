@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+::-webkit-scrollbar {width: 0;}
+html, body {scroll-behavior: smooth;}
+a {text-decoration: none; color:#333;}
+img {display: block; width: 100%;}
+
+@font-face {
+    font-family: 'Cafe24Decoschool';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Decoschool.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#layout {
+  width: 100%;
+}
+#right_side {
+  width: 140px;
+  min-height: 600px;
+  position: fixed;
+  right: 0;
+  padding: 15px;
+  z-index: 1;
+  top:15vh;
+  padding-top: 80px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  opacity: 0;
+  display: none;
+}
+#right_side h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#right_side h1 a {
+  color:#fff;
+}
+#right_side ul {
+  list-style: none;
+  text-align: center;
+}
+#right_side li {
+  margin:10px;
+}
+.mainMenu {
+  display: block;
+  padding:10px;
+  border:2px solid pink;
+  background: rgb(255, 227, 227);
+  color:#333;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: relative;
+  right: 0;
+}
+.mainMenu:hover {
+  background: black;
+  color:white;
+}
+.subMenu a {
+  display: block;
+  font-size: 0.9rem;
+  color:#fff;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+#top_movies {
+  min-height: 100vh;
+  background: black;
+}
+#top_movies h2 {
+  display: none;
+}
+#head {
+  color:white;
+  text-align: center;
+  padding: 70px 0 10px 0;
+  font-size: 2rem;
+  font-family: 'Cafe24Decoschool';
+}
+#image_card {
+  padding: 100px 20px;
+  width: 1800px;
+  margin: auto;
+  display: flex; justify-content: space-around;
+}
+#image_card img {
+  width: 300px;
+  height: 600px;
+  position: relative;
+  transition: 0.5s;
+}
+.cards {
+  padding: 5px;
+  position: relative;
+  border-radius: 20px;
+  background-image: linear-gradient(-180deg, rgb(78, 78, 78) 0%, rgb(32, 32, 32) 100%);
+  background-origin:border-box;
+  background-clip:border-box;
+}
+.cards:hover img {
+  filter: brightness(0.1);
+  transform: rotateY(180deg);
+}
+.cards img {
+  transition:filter 0.5s;
+  border-radius: 20px;
+  border:5px solid;
+}
+.cards div {
+  font-family: 'GowunDodum-Regular';
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top:230px;
+  text-align: center;
+  left:32%;
+  color:white;
+  display: none;
+}
+.cards:hover div {
+  display: block;
+}
+
+#film_director {
+  min-height: 100vh;
+  background: black;
+  padding: 20px;
+}
+#film_director h2 {
+  font-family: 'SBAggroB';
+  color:white;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 2rem;
+}
+#film_director ul {
+  font-family: 'GowunDodum-Regular';
+  color:white;
+  list-style: none;
+  margin:auto;
+  top:0;
+  position: relative;
+  font-size: 1.7rem;
+}
+#film_director li {
+  border:2px solid rgb(30, 90, 255);
+  padding:10px 60px;
+  border-radius: 50px;
+  margin:10px 0;
+}
+#film_director li:hover {
+  background: linear-gradient(to right, rgb(33, 101, 128), rgb(9, 9, 131))
+}
+#director_bg {
+  width: 1200px;
+  margin:15px auto;
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  border:5px solid rgb(58, 58, 58);
+}
+#film_director img {
+  width: 436px;
+  height: 703px;
+  display: block;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transition: 0.5s;
+}
+#film_director img:hover {
+  transform: scale(1.1);
+}
+
+#section_movies {
+  min-height: 100vh;
+  background: black;
+  padding: 20px;
+  text-align: center;
+}
+#section_movies h2 {
+  display: block;
+}
+#flex1 {
+  display: flex;
+}
+#flex2 {
+  display: flex;
+}
+#section_movies a {
+  width: 200px;
+  height: 200px;
+}
+#section_movies img {
+  position: relative;
+  width: 300px;
+}
+
+#contact {
+  min-height: 100vh;
+  background: black;
+  text-align: center;
+}
+#contact h3 {
+  color:white;
+  font-size: 2rem;
+  padding: 50px 0 ;
+}
+#contact p {
+  color: white;
+  padding: 20px 0;
+}
+#contact a {
+  display: block;
+  border:1px solid red;
+  width: 100px;
+  margin: auto;
+}
+#contact img {
+  display: block;
+  width: 100px;
+}
