@@ -24,23 +24,45 @@ img {display: block; width: 100%;}
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 #layout {
   width: 100%;
+}
+#right_btn.material-symbols-rounded {
+  position: fixed;
+  background: rgb(49, 49, 49);
+  border:1px solid white;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color:#fff;
+  bottom:150px;
+  right: 0;
+  padding:10px 20px;
+}
+#right_btn.material-symbols-rounded.act {
+  background: white;
+  color:#333;
+}
+#right_btn.material-symbols-rounded:hover {
+  cursor: pointer;
 }
 #right_side {
   width: 140px;
   min-height: 600px;
   position: fixed;
-  right: 0;
+  right:-200px;
   padding: 15px;
   z-index: 1;
   top:15vh;
   padding-top: 80px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  opacity: 0;
-  display: none;
 }
 #right_side h1 {
   font-size: 1.3rem;
@@ -189,27 +211,81 @@ img {display: block; width: 100%;}
 }
 
 #section_movies {
+  font-family: 'NPSfontBold';
   min-height: 100vh;
   background: black;
-  padding: 20px;
-  text-align: center;
+  padding: 100px 0 50px;
 }
 #section_movies h2 {
-  display: block;
+  display: none;
 }
-#flex1 {
+#section_movies .movie_one {
+  color:white;
   display: flex;
+  width:1200px;
+  margin: 30px auto;
+  position: relative;
 }
-#flex2 {
-  display: flex;
+.movie_one h3 {
+  padding:20px;
+  text-align: center;
+  font-size: 2rem;
 }
-#section_movies a {
-  width: 200px;
-  height: 200px;
+.movie_one span {
+  padding: 0 20px;
+  font-weight: normal;
+  font-size: 1rem;
+}
+.movie_one > div {
+  background: #2e2e2e;
+  width: 300px;
+  height: 600px;
+  padding: 150px 0;
+  position: absolute;
+  opacity : 0;
+}
+.movie_left > div {
+  left:-300px;
+}
+.movie_left img {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  left: 0;
+}
+.movie_right img {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  left: 0;
+}
+.movie_right > div {
+  left:300px;
+}
+.movie_one > div ul {
+  padding: 0 40px;
+}
+.movie_one > div ul li {
+  padding: 10px 0;
 }
 #section_movies img {
   position: relative;
+  display: block;
+  z-index: 1;
   width: 300px;
+  transition: 0.5s;
+}
+#section_movies img:hover {
+  filter: brightness(0.2);
+  cursor: pointer;
+}
+#flex1 {
+  display: flex;
+  width: 600px;
+  margin: 300px auto;
+}
+#flex2 {
+  display: flex;
+  width: 600px;
+  margin: 300px auto;
 }
 
 #contact {
